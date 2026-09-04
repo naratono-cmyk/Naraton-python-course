@@ -118,6 +118,8 @@ print(f"{count} letters 'l' found in '{text}'")
 print("\n=== MEMBERSHIP TEST ===")
 print("'a' in 'program':", 'a' in 'program')  # True
 print("'at' not in 'battle':", 'at' not in 'battle')  # False
+#'a'in'program' => True
+#'at'notin'battle' => False
 
 # ===========================
 # 9. STRING IMMUTABILITY 
