@@ -45,3 +45,41 @@ student.add_grade(
 )
 print(student.get_average_grade())  # Should print 88.5
 print(student.get_grade_report())   # Should show all grades
+
+
+#___________________________________________________________________________________________
+
+class Student:
+    def __init__(self, name, age, student_id):
+        self.name = name
+        self.age = age
+        self.student_id = student_id
+        self.grades = []
+
+    def add_grade(self, subject, grade):
+        grade_data = {
+            "subject": subject,
+            "grade": grade
+        }
+        self.grades.append(grade_data)
+
+    def get_average_grade(self):
+        if len(self.grades) == 0:
+            return 0
+
+        total = 0
+        for grade in self.grades:
+            total += grade["grade"]
+
+        return total / len(self.grades)
+
+    def get_grade_report(self):
+        print("ชื่อ:", self.name)
+        print("อายุ:", self.age)
+        print("รหัสนักเรียน:", self.student_id)
+        print("ผลการเรียน:")
+
+        for grade in self.grades:
+            print(grade["subject"], ":", grade["grade"])
+
+        print("คะแนนเฉลี่ย:", self.get_average_grade())
