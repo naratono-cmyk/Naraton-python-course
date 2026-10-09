@@ -5,7 +5,8 @@ class BankAccount:
         self.__balance = initial_balance  # Private attribute
         self.__transaction_history = []   # Private attribute
     
-    # Public method to access private balance
+    # Public method to access private balance 
+    #สำหรับการเช็คยอดเงินคงเหลือ
     def get_balance(self):
         return self.__balance
     
@@ -26,6 +27,7 @@ class BankAccount:
         return False
     
     # Property decorator for read-only access
+    #ได้สำเนาของธุรกรรม
     @property
     def transaction_history(self):
         return self.__transaction_history.copy()
@@ -34,8 +36,10 @@ class BankAccount:
         return f"Account {self.account_number}: Balance ${self.__balance}"
 
 # Usage example
+#toTHing
 account = BankAccount("12345", 1000)
 print(account.get_balance())  # 1000
+account.balance = 1000000
 account.deposit(500)
 account.withdraw(200)
 print(account)  # Account 12345: Balance $1300

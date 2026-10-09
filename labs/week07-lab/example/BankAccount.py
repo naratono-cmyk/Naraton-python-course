@@ -40,6 +40,7 @@ class BankAccount:
 # Example usage
 account = BankAccount("John Doe", 1000)
 print(account.get_balance())
+account.balance = 1000000
 print(account.deposit(500))
 print(account.withdraw(200))
 print("\nTransaction History:")
