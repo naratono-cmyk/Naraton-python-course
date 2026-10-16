@@ -77,4 +77,4 @@ elif 31 <= age_int <= 60:
     print("Age Group: Adult (31-60)")  
 else:
     print("Age Group: Senior") 
-print(f"Phone: +91-{phone} cvv")
+print(f"Phone: +91-{phone} ")
